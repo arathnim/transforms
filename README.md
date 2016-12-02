@@ -3,6 +3,7 @@ A number of transforms to lisp syntax, mostly infix.
 I'm just calling them transforms for now, syntax extensions might be a more accurate term.
 
 This process occurs before macroexpansion, so everything looks as it was before by the time it arrives at the macro.
+Yes, this clobbers certain variables, until I get lexical variable analysis up and running.
 
 Currently only works on sbcl, might port to other implementations if the need arises.
 
@@ -35,6 +36,14 @@ The ones marked (todo) are unimplemented, just started on this project. Ideas fo
    (error "whoops"))
 ```
 
+### underscore-lambda (todo)
+
+```cl
+(+ 10 _)
+
+(reduce (+ _ _) list)
+```
+
 ### simple-infix (todo)
 
 Just arithmetic infix transforms. Normal operator precedence.
@@ -54,7 +63,7 @@ More than one element in isolation means function application.
 ### full-infix (todo)
 
 Flow control and access infix expressions.
-Some concepts left unimplemented, because they'd be done better with full infix, type, and whitespace code inference.
+Some concepts left unimplemented, because they'd be done better with full arity, type, lexical variable, and whitespace information.
 
 ```cl
 (x = (array !! n))
