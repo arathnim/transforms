@@ -25,14 +25,14 @@ The ones marked (todo) are unimplemented, just started on this project. Ideas fo
 (and (bar <- (really-long-cond foo)) 
      (qux <- (other-really-long-cond baz))
      (+ foo bar))
-	
+   
 (defun foo (bar baz)
    (qux <- (apply baz bar))
-	(list qux bar))
+   (list qux bar))
 
 (if (> 6 (value <- (gethash key table))) 
-	(print value) 
-	(error "whoops"))
+   (print value) 
+   (error "whoops"))
 ```
 
 ### simple-infix (todo)
@@ -44,7 +44,7 @@ More than one element in isolation means function application.
 (4 + 5)
 
 (let ((foo (bar / baz)))
-	   (foo + bar - baz))
+      (foo + bar - baz))
 
 (foo + (bar - baz))
 
@@ -71,8 +71,8 @@ Also usable with a variable in the left side, and a single type.
 ```cl
 (fibo :: integer -> integer)
 (defun fibo (n)
-	(if (n < 2)
-		 n
+   (if (n < 2)
+       n
        (fibo (n - 2) + fibo (n - 1))))
 
 ```
