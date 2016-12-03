@@ -36,12 +36,12 @@ The ones marked (todo) are unimplemented, just started on this project. Ideas fo
    (error "whoops"))
 ```
 
-### underscore-lambda (todo)
+### underscore-lambda and hole-lambda
 
 ```cl
-(+ 10 _)
+(map (+ 10 _) '(1 2 3)) => (11 12 13)
 
-(reduce (+ _ _) list)
+(reduce #'max list :key (gethash <> table))
 ```
 
 ### simple-infix (todo)
