@@ -38,39 +38,12 @@ The ones marked (todo) are unimplemented, just started on this project. Ideas fo
 
 ### underscore-lambda and hole-lambda
 
+Does not yet use lexical or type information, so only works on a single level.
+
 ```cl
 (map (+ 10 _) '(1 2 3)) => (11 12 13)
 
 (reduce #'max list :key (gethash <> table))
-```
-
-### simple-infix (todo)
-
-Just arithmetic infix transforms. Normal operator precedence.
-More than one element in isolation means function application.
-
-```cl
-(4 + 5)
-
-(let ((foo (bar / baz)))
-      (foo + bar - baz))
-
-(foo + (bar - baz))
-
-(foo - ((bar qux) + baz))
-```
-
-### full-infix (todo)
-
-Flow control and access infix expressions.
-Some concepts left unimplemented, because they'd be done better with full arity, type, lexical variable, and whitespace information.
-
-```cl
-(x = (array !! n))
-
-(0 < x < 1)
-
-((0 < x < length) && (0 < y < length))
 ```
 
 ### haskell-type-decleration (todo)
