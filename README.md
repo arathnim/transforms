@@ -36,14 +36,21 @@ The ones marked (todo) are unimplemented, just started on this project. Ideas fo
    (error "whoops"))
 ```
 
-### underscore-lambda and hole-lambda
+### hole-lambda
 
+Turns forms with "<>" into lambda statements.
 Does not yet use lexical or type information, so only works on a single level.
 
 ```cl
-(map (+ 10 _) '(1 2 3)) => (11 12 13)
+normal usage:
+
+(map (+ 10 <>) '(1 2 3)) => (11 12 13)
 
 (reduce #'max list :key (gethash <> table))
+
+positional lambda:
+
+(filter (foo <2> <1>) list)
 ```
 
 ### haskell-type-decleration (todo)
